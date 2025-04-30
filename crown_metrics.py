@@ -24,6 +24,7 @@ def adaptive_alpha(coords_2d):
     return 0.075 * max(width, height)
 
 def crown_volume_3d(coords_3d, alpha=2.0):
+    """Use 3D alpha shape to calculate volume"""
     try:
         shape = alphashape.alphashape(coords_3d, alpha)
         mesh = pv.wrap(shape)
