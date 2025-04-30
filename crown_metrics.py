@@ -83,5 +83,5 @@ def extract_tree_crowns_from_las(las_file, output_shp, crs_epsg=32633):
     print(f"✅ Crown polygons saved to {output_shp}")
 
 
-# ✅ Run this on your .las/.laz file
-extract_tree_crowns_from_las("c:/lidar/NBK/230712_041430/treeiso/230712_041430_merge_sacor_csf_clip_treeiso.laz", "c:/lidar/NBK/230712_041430/treeiso/230712_041430_tree_crowns_alpha_all.shp", crs_epsg=32753)
+# Run this on your .las/.laz file with your CRS
+extract_tree_crowns_from_las("input/with/treed_id.laz", "output/shapefile/with/metrics.shp", crs_epsg=32663)
