@@ -83,5 +83,5 @@ def extract_tree_crowns_from_las(las_file, output_shp, crs_epsg=32633):
     print(f"✅ Crown polygons saved to {output_shp}")
 
 
-# Run this on your .las/.laz file with your CRS
+# Run on .las/.laz file with defined CRS
 extract_tree_crowns_from_las("input/with/treed_id.laz", "output/shapefile/with/metrics.shp", crs_epsg=32663)
