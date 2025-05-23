@@ -12,4 +12,4 @@ Assign metrics to these polygons:
   - Crown depth (m) - Measured from base of crown to the tip.
   - Crown volume (m^3) - Two metrics are provided: (i) the volume of crown assuming a conical crown (1/3* area * crown height), (ii) volume derived from the 3D alpha shape of the crown (a more realistic representation of volume).
 
-<img src="https://github.com/timwh/acc_ass/blob/main/images/Screenshot 2025-03-31093809.png" width="350" height="350" />
+<img src="https://github.com/timwh/tree_metrics/blob/main/img/Screenshot_2025-05-23_145317.png" width="350" height="350" />
