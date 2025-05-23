@@ -1,5 +1,6 @@
 # tree_metrics
-## Derive metrics from segmented point cloud with unique tree IDs. Requires a segmented point cloud with a tree ID attribute.
+## Derive metrics from segmented point cloud with unique tree IDs.
+### Requires a segmented point cloud with a tree ID attribute.
 
 Extract tree crowns as polygons using 2D alpha shapes.
 
