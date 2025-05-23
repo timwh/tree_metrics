@@ -83,9 +83,9 @@ def process_las_to_crowns(las_file, output_shp, crs_epsg=32633):
         avg_diameter = (width + height) / 2
         # Tree height (absolute)
         tree_height = zs.max() - zs.min()
-        # Crown height: exclude base 5% of Z to avoid noise
+        # Crown depth: exclude base 5% of Z to avoid noise
         z_min = np.percentile(zs, 5)
-        crown_height = zs.max() - z_min
+        crown_depth = zs.max() - z_min
         # Crown volume 2d (simplified cone)
         crown_volume = (1/3) * area * crown_height
         # Optional 3D alpha shape volume
@@ -99,7 +99,7 @@ def process_las_to_crowns(las_file, output_shp, crs_epsg=32633):
             'max_diam_m': round(max_diameter, 4),
             'avg_diam_m': round(avg_diameter, 4),
             'tree_ht_m': round(tree_height, 4),
-            'crown_ht_m': round(crown_height, 4),
+            'crown_ht_m': round(crown_depth, 4),
             'volume_2d_m3': round(crown_volume, 4),
             'volume_3d_m3': round(vol_3d, 4)
         })
