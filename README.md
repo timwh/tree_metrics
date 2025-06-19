@@ -16,6 +16,6 @@ Assign metrics to these polygons:
 
 Plot tree height class distribution
 
-<img src="https://github.com/timwh/tree_metrics/blob/main/img/Figure_1.png" width="350" height="350" />
+<img src="https://github.com/timwh/tree_metrics/blob/main/img/Figure_1.png" width="500" height="300" />
 
 
