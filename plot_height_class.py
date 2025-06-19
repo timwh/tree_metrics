@@ -5,7 +5,7 @@ import seaborn as sns
 
 ### Bin and plot out height class distribution
 ### Read tree metric shapefile
-df = gpd.read_file('c:/lidar/refplots/S1/20200519_out_done_S1_cchulls.shp')
+df = gpd.read_file('output/shapefile/with/metrics.shp')
 
 # Select height class type - arbitrary or Werner
 htype = "Werner"
