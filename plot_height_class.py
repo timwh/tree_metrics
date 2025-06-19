@@ -1,7 +1,13 @@
+import geopandas as gpd
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+### Bin and plot out height class distribution
+### Read tree metric shapefile
+df = gpd.read_file('c:/lidar/refplots/S1/20200519_out_done_S1_cchulls.shp')
+
+# Select height class type - arbitrary or Werner
 htype = "Werner"
 
 if htype == "Arbitrary":
@@ -34,7 +40,7 @@ else:
 
 print(bin_names)
 
-# Bin heights
+# Bin heights into classes
 df["htclass"] = pd.cut(df["Z"], bins=bins, labels=bin_names, right=False)
 
 # Remove NA trees
