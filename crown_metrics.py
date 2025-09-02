@@ -36,10 +36,18 @@ def process_las_to_crowns(las_file, output_shp, crs_epsg=32633):
     # Read LAS file
     las = laspy.read(las_file)
 
-    # Extract XYZ and Tree IDs
+    # Extract XYZ and Tree IDs (either final_segs (treeiso) or treeID (lidR)
     try:
-        #tree_ids = np.array(las['tree_id']) # Custom extra dimension with unique tree IDs
-        tree_ids = las['final_segs']  # Custom extra dimension with unique tree IDs
+        if 'final_segs' in list(lasng.point_format.dimension_names):
+            tree_ids = 'final_segs' # Custom extra dimension with unique tree IDs
+            print(f'TreeID ({idfield}) field exists!')
+        elif 'treeID' in list(lasng.point_format.dimension_names):
+            tree_ids = 'treeID'
+            print(f'TreeID ({idfield}) field exists!')
+        else:
+            print('There is no treeID field in this point cloud. Please conduct an ITC detection.')
+            exit()
+
     except KeyError:
         raise ValueError("LAS file must contain a tree_id attribute per point.")
 
