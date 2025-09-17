@@ -1,5 +1,6 @@
 """
 crown_metrics.py
+Derive a number of crown metrics from a point cloud with unique tree IDs
 Author: Tim Whiteside
 Requires: laspy, pandas, geopandas, numpy, alphashape, shapely, scipy, pyvista
 """
