@@ -55,7 +55,7 @@ def process_las_to_crowns(las_file, output_shp, crs_epsg=32633):
         'x': np.array(las.x),
         'y': np.array(las.y),
         'z': np.array(las.z),
-        'tree_id': np.array(tree_ids)
+        'tree_id': np.array(las[tree_ids])
     })
 
     crowns = []
