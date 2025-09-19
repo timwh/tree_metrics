@@ -41,10 +41,10 @@ def process_las_to_crowns(las_file, output_shp, crs_epsg=32633):
     try:
         if 'final_segs' in list(las.point_format.dimension_names):
             tree_ids = 'final_segs' # Custom extra dimension with unique tree IDs
-            print(f'TreeID ({idfield}) field exists!')
+            print(f'TreeID ({tree_ids}) field exists!')
         elif 'treeID' in list(las.point_format.dimension_names):
             tree_ids = 'treeID'
-            print(f'TreeID ({idfield}) field exists!')
+            print(f'TreeID ({tree_ids}) field exists!')
         else:
             print('There is no treeID field in this point cloud. Please conduct an ITC detection.')
             exit()
