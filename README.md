@@ -3,7 +3,7 @@
 ## Derive metrics from segmented point cloud with unique tree IDs.
 ### Requires a segmented point cloud with a tree ID attribute.
 
-crown_metrics.py
+<b>crown_metrics.py</b>
 
 Extract tree crowns as polygons using 2D alpha shapes.
 
@@ -16,7 +16,7 @@ Assign metrics to these polygons:
   - Crown volume (m^3) - Two metrics are provided: (i) the volume of crown assuming a conical crown (1/3* area * crown height), (ii) volume derived from the 3D alpha shape of the crown (a more realistic representation of volume).
 
 
-
+<b>plot_height_class.py</b>
 
 Plot tree height class distribution
 
