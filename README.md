@@ -20,7 +20,7 @@ Assign metrics to these polygons:
 
 <b>plot_height_class.py</b>
 
-Plot tree height class distribution
+Script to plot the tree height class distribution based on assigned bins. Can be modified to plot other metrics.
 
 <img src="https://github.com/timwh/tree_metrics/blob/main/img/Figure_1.png" width="500" height="300" />
 
