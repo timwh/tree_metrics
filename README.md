@@ -13,7 +13,9 @@ Assign metrics to these polygons:
   - Average diameter of crown (m) - The mean of max and min diameters of crown.
   - Tree height (m) - Measured from ground to the tip of crown.
   - Crown depth (m) - Measured from base of crown to the tip.
-  - Crown volume (m^3) - Two metrics are provided: (i) the volume of crown assuming a conical crown (1/3* area * crown height), (ii) volume derived from the 3D alpha shape of the crown (a more realistic representation of volume).
+  - Crown volume (m^3) - Two metrics are provided:
+  -   (i) the volume of crown assuming a conical crown (1/3* area * crown height),
+  -   (ii) volume derived from the 3D alpha shape of the crown (a more realistic representation of volume).
 
 
 <b>plot_height_class.py</b>
