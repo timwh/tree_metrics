@@ -1,5 +1,5 @@
 # tree_metrics
-<img src = "https://github.com/timwh/tree_metrics/blob/main/img/ChatGPT_Image_Sep_19_2025_01_51_06_PM.png" width = '200' />
+<img src = "https://github.com/timwh/tree_metrics/blob/main/img/ChatGPT_Image_Sep_19_2025_01_51_06_PM.png" width = '200'> <img src="https://github.com/timwh/tree_metrics/blob/main/img/Screenshot_2025-05-23_145317.png" width="300" height="300" />
 ## Derive metrics from segmented point cloud with unique tree IDs.
 ### Requires a segmented point cloud with a tree ID attribute.
 
@@ -13,7 +13,7 @@ Assign metrics to these polygons:
   - Crown depth (m) - Measured from base of crown to the tip.
   - Crown volume (m^3) - Two metrics are provided: (i) the volume of crown assuming a conical crown (1/3* area * crown height), (ii) volume derived from the 3D alpha shape of the crown (a more realistic representation of volume).
 
-<img src="https://github.com/timwh/tree_metrics/blob/main/img/Screenshot_2025-05-23_145317.png" width="350" height="350" />
+
 
 Plot tree height class distribution
 
