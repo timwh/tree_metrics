@@ -1,5 +1,5 @@
 # tree_metrics
-<img src = "https://github.com/timwh/tree_metrics/blob/main/img/ChatGPT_Image_Sep_19_2025_01_51_06_PM.png" width = '200'> <img src="https://github.com/timwh/tree_metrics/blob/main/img/Screenshot_2025-05-23_145317.png" width="300" height="300" />
+<img src = "https://github.com/timwh/tree_metrics/blob/main/img/ChatGPT_Image_Sep_19_2025_01_51_06_PM.png" width = '250'> <img src="https://github.com/timwh/tree_metrics/blob/main/img/Screenshot_2025-05-23_145317.png" width="300" height="300" />
 ## Derive metrics from segmented point cloud with unique tree IDs.
 ### Requires a segmented point cloud with a tree ID attribute.
 
