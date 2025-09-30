@@ -10,6 +10,7 @@ df = gpd.read_file('output/shapefile/with/metrics.shp')
 # Select height class type - arbitrary or Werner
 htype = "Werner"
 
+# Assign bins by selected height class type
 if htype == "Arbitrary":
     bins = [2, 4, 6, 8, 10, 12, 14, 16]
     bin_names = ["2-4m", "4-6m", "6-8m", "8-10m", "10-12m", "12-14m", "14-16m"]
