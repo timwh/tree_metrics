@@ -11,19 +11,34 @@ import geopandas as gpd
 import numpy as np
 import alphashape
 from shapely.geometry import MultiPoint
+from scipy.spatial import ConvexHull
 from scipy.spatial import distance
 import pyvista as pv
 
 
 def adaptive_alpha(coords_2d):
     """Compute alpha based on tree extent."""
-    if len(points_2d) < 4:
+    if len(coords_2d) < 4:
         return 1.0
     mp = MultiPoint(coords_2d)
     width = mp.bounds[2] - mp.bounds[0]
     height = mp.bounds[3] - mp.bounds[1]
     return 0.075 * max(width, height)
 
+def maximum_diameter(coords_2d):
+    """ Calc max diameter using Convex Hull"""
+    if len(coords_2d) >= 3:
+        try:
+            hull = ConvexHull(coords_2d)
+            hull_points = coords_2d[hull.vertices]
+            max_diameter = np.max(distance.cdist(hull_points, hull_points))
+            return (max_diameter)
+        except Exception as e:
+            print(f"⚠️ Failed to compute max diameter ({e})")
+            return(0.0)
+    else:
+        return(0.0)
+        
 def crown_volume_3d(coords_3d, alpha=2.0):
     """Use 3D alpha shape to calculate volume"""
     try:
@@ -65,7 +80,7 @@ def process_las_to_crowns(las_file, output_shp, crs_epsg=32633):
         coords_2d = group[['x', 'y']].values
         coords_3d = group[['x', 'y', 'z']].values
         zs = group['z'].values
-        if len(coords) < 3:
+        if len(coords_2d) < 3:
             continue
             
         alpha = adaptive_alpha(coords_2d)
@@ -84,7 +99,9 @@ def process_las_to_crowns(las_file, output_shp, crs_epsg=32633):
         # Crown area
         area = polygon.area
         # Max diameter = max distance between crown points
-        max_diameter = np.max(distance.pdist(coords_2d)) if len(coords_2d) >= 2 else 0
+        max_diameter = maximum_diameter(coords_2d)
+        if max_diameter == 0:
+            print(f"⚠️ Tree {tree_id}: failed to compute max diameter")
         # Avg diameter from polygon
         bounds = polygon.bounds
         width = bounds[2] - bounds[0]
@@ -96,7 +113,7 @@ def process_las_to_crowns(las_file, output_shp, crs_epsg=32633):
         z_min = np.percentile(zs, 5)
         crown_depth = zs.max() - z_min
         # Crown volume 2d (simplified cone)
-        crown_volume = (1/3) * area * crown_height
+        crown_volume = (1/3) * area * crown_depth
         # Optional 3D alpha shape volume
         vol_3d = crown_volume_3d(coords_3d, alpha=alpha)
 
