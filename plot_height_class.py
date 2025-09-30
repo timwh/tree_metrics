@@ -64,5 +64,5 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 
 # Save plot
-plt.savefig("height_class_distribution.png", dpi=300)
+plt.savefig("output/height_class_distribution.png", dpi=300)
 plt.show()
