@@ -17,7 +17,7 @@ Assign metrics to these polygons:
      1.  the volume of a crown assuming a conical crown (1/3* area * crown height),
      1.  the volume of a crown derived from the 3D alpha shape of the crown (a more realistic representation of volume).
 
-Save to a shapefile
+Save to a shapefile.
 
 
 <b>plot_height_class.py</b>
@@ -28,6 +28,6 @@ A script to plot the tree height class distribution based on assigned bins. The 
 
 <b>las_trees_poly.py</b>
 
-Function to clip las/laz file with tree ids to a plot, includes all trees that intersect with plot boundary by at least the minimum fraction
+Function to clip las/laz file with tree ids to a plot, includes all trees that intersect with plot boundary by at least the minimum fraction.
 
 <img src="https://github.com/timwh/tree_metrics/blob/main/img/pc_tree_id.png" width="300" />
