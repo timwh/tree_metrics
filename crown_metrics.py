@@ -108,7 +108,7 @@ def process_las_to_crowns(las_file, output_shp, crs_epsg=32633):
         height = bounds[3] - bounds[1]
         avg_diameter = (width + height) / 2
         # Tree height (absolute)
-        tree_height = zs.max() - zs.min()
+        tree_height = zs.max()
         # Crown depth: exclude base 5% of Z to avoid noise
         z_min = np.percentile(zs, 5)
         crown_depth = zs.max() - z_min
