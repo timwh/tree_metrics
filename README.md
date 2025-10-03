@@ -17,6 +17,8 @@ Assign metrics to these polygons:
      1.  the volume of a crown assuming a conical crown (1/3* area * crown height),
      1.  the volume of a crown derived from the 3D alpha shape of the crown (a more realistic representation of volume).
 
+Save to a shapefile
+
 
 <b>plot_height_class.py</b>
 
