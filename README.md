@@ -26,6 +26,12 @@ A script to plot the tree height class distribution based on assigned bins. The 
 
 <img src="https://github.com/timwh/tree_metrics/blob/main/img/Figure_1.png" width="500" height="300" />
 
+<b>height_class_3D_plot.py</b>
+
+A script to plot trees by height class in 3D.
+
+<img src="https://gitub.com" width="500" height="300" />
+
 <b>las_trees_poly.py</b>
 
 Function to clip las/laz file with tree ids to a plot, includes all trees that intersect with plot boundary by at least the minimum fraction.
