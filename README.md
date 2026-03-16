@@ -30,7 +30,7 @@ A script to plot the tree height class distribution based on assigned bins. The 
 
 A script to plot trees by height class in 3D.
 
-<img src="https://gitub.com" width="500" height="300" />
+<img src="https://gitub.com/timwh/tree_metrics/blob/main/img/height_class_plot_1B.png" width="500" height="300" />
 
 <b>las_trees_poly.py</b>
 
