@@ -37,3 +37,11 @@ A script to plot trees by height class in 3D. Uses same colour palette as plot_h
 Function to clip las/laz file with tree ids to a plot, includes all trees that intersect with plot boundary by at least the minimum fraction.
 
 <img src="https://github.com/timwh/tree_metrics/blob/main/img/pc_tree_id.png" width="300" />
+
+<b> norm2chm.py </b>
+
+Script to convert a normalised point cloud as a canopy height model (CHM) raster.
+
+<b> chm_threshold.py </b>
+
+Function to threshold a CHM at a designated height to provide a canopy cover layer (shapefile)
