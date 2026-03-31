@@ -42,6 +42,8 @@ Function to clip las/laz file with tree ids to a plot, includes all trees that i
 
 Script to convert a normalised point cloud as a canopy height model (CHM) raster.
 
+<img src="https://github.com/timwh/tree_metrics/blob/main/img/Site_S1_CHM.png" width="300" />
+
 <b> chm_threshold.py </b>
 
 Function to threshold a CHM at a designated height to provide a canopy cover layer (shapefile)
