@@ -8,28 +8,22 @@ from shapely.geometry import shape
 import matplotlib.pyplot as plt
 
 # Load CHM
-def chm_threshold(plot_no, wkg_dir, input_raster):
+def chm_threshold(plot_no, wkg_dir, input_raster, threshold = 2):
     """
     Function for thresholding a surface model
-    :param plot_no:
-    :param wkg_dir:
-    :param input_raster:
+    :param plot_no: str
+    :param wkg_dir: str or Path
+    :param input_raster: str or Path
+    :param threshold: num in meters
     """
-    #os.chdir(f'C:/lidar/Pine_creek/{plot_no}/align/treeiso')
     os.chdir(wkg_dir)
-
-    input_raster = input_file
-
     with rio.open(input_raster) as src:
         chm = src.read(1)
         transform = src.transform
         crs = src.crs
         # Set and apply threshold
-        threshold = 1.5  # height in metres
         binary_chm = np.where(chm >= threshold, 1, 0)
         masked_binary = np.ma.masked_where(np.isnan(chm), binary_chm)
-
-
 
     with rio.open(
         'binary.tif',
@@ -48,7 +42,7 @@ def chm_threshold(plot_no, wkg_dir, input_raster):
 
     plt.figure(figsize=(10, 8))
     plt.imshow(masked_binary, cmap='gray', origin='upper')
-    plt.title(f"{plot_no} Binary Canopy Mask (≥ 1.5 m)")
+    plt.title(f"{plot_no} Binary Canopy Mask (≥ {threshold} m)")
     plt.axis('off')
     plt.show()
 
@@ -76,7 +70,7 @@ if __name__ == "__main__":
     wkg_dir = f'c:/lidar/{date}/{plot}'
     input_file = f'{date}_{plot}_20cm.tif'
 
-    chm_threshold(plot, wkg_dir, input_file)
+    chm_threshold(plot, wkg_dir, input_file, threshold)
 
 
 
