@@ -28,7 +28,7 @@ A script to plot the tree height class distribution based on assigned bins. The 
 
 <b>height_class_3D_plot.py</b>
 
-A script to plot trees by height class in 3D.
+A script to plot trees by height class in 3D. Uses same colour palette as plot_height_class.py
 
 <img src="https://github.com/timwh/tree_metrics/blob/main/img/height_class_plot_1B.png" width="500" height="300" />
 
