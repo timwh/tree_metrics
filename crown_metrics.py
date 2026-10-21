@@ -75,7 +75,7 @@ def process_las_to_crowns(plot_no,las_file,output_shp):
     # Read LAS file
     las = laspy.read(las_file)
 
-    # Extract XYZ and Tree IDs (either final_segs (treeiso) or treeID (lidR)
+    # Extract XYZ and Tree IDs (either final_segs (treeiso) or treeID (lidR or tree_isolation)
     try:
         if 'final_segs' in list(las.point_format.dimension_names):
             tree_ids = 'final_segs'  # Custom extra dimension with unique tree IDs
